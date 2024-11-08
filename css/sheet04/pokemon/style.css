@@ -19,15 +19,24 @@ body {
 }
 
 .caja {
+  display: inline-flex;
+  flex-direction: column;
+  /*tareas:
+   -que se rellenen los huecos
+   -que la barrita marrón también cubra la 
+    frase: "evoluciona de"
+   -que si se agranda la pantalla los cuadros
+    mantengan la forma, que no se estiren. */
+  min-width: 30%;
   .arriba,
   .abajo {
-    display: flex;
-    flex-direction: column;
   }
   .arriba {
+    display: grid;
     font-weight: bold;
     background-color: var(--gris);
     position: relative;
+    justify-content: center;
     .id {
       background-color: var(--beige);
       color: var(--marron);

@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("fuente/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
+:root {
+  --yellow: #ffe62c;
+  --gris: #dedede;
+  --beige: #d0ccc9;
+  --marron: #8d755f;
+  --blanco: #fefefe;
+  --palido: #968170;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--yellow);
+  font-family: ubuntu;
+}
+
+.caja {
+  .arriba,
+  .abajo {
+    display: flex;
+    flex-direction: column;
+  }
+  .arriba {
+    font-weight: bold;
+    background-color: var(--gris);
+    position: relative;
+    .id {
+      background-color: var(--beige);
+      color: var(--marron);
+      position: absolute;
+      bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+  .abajo {
+    padding-left: 10px;
+    background-color: var(--blanco);
+    .tipos {
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        color: var(--palido);
+        text-transform: uppercase;
+        border: 1px solid;
+        border-radius: 5px;
+      }
+    }
+    .evol {
+      span {
+        display: flex;
+        border-left: solid #593110;
+        font-size: large;
+      }
+    }
+  }
+}
+
+span {
+  color: #593110;
+}

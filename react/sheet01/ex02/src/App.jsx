@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+//import ListaDeProductos from "../components/ListaDeProductos";
+import Producto from "../components/producto";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Producto nombre={"mando"} precio={"5"} descripcion={"a distancia"} />
+      <Producto nombre={"cable"} precio={"6"} descripcion={"de 3 metros"} />
+      <Producto
+        nombre={"conector"}
+        precio={"7"}
+        descripcion={"de VGA a HDMI"}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

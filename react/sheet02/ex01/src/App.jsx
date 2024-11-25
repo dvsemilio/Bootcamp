@@ -1,6 +1,6 @@
 import "./App.css";
 import Contador from "../components/contador";
-
+//una forma de tener components fuera de src, una gilipollez mía.
 const App = () => {
   return (
     <div>

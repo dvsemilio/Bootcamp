@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+  font-family: "ubuntu";
+  src: url("fuente/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
+:root {
+  --yellow: #ffe62c;
+  --gris: #dedede;
+  --beige: #d0ccc9;
+  --marron: #8d755f;
+  --blanco: #fefefe;
+  --palido: #968170;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--yellow);
+  font-family: ubuntu;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.caja {
+  display: inline-flex;
+  flex-direction: column;
+  /*tareas:
+   -que se rellenen los huecos
+   -que la barrita marrón también cubra la 
+    frase: "evoluciona de"
+   -que si se agranda la pantalla los cuadros
+    mantengan la forma, que no se estiren. */
+  min-width: 30%;
+  .arriba,
+  .abajo {
   }
-  to {
-    transform: rotate(360deg);
+  .arriba {
+    display: grid;
+    font-weight: bold;
+    background-color: var(--gris);
+    position: relative;
+    justify-content: center;
+    .id {
+      background-color: var(--beige);
+      color: var(--marron);
+      position: absolute;
+      bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+  .abajo {
+    padding-left: 10px;
+    background-color: var(--blanco);
+    .tipos {
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        color: var(--palido);
+        text-transform: uppercase;
+        border: 1px solid;
+        border-radius: 5px;
+      }
+    }
+    .evol {
+      span {
+        display: flex;
+        border-left: solid #593110;
+        font-size: large;
+      }
+    }
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+span {
+  color: #593110;
 }

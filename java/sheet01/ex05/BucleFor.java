@@ -4,6 +4,8 @@ for . Llama a la clase BucleFor . */
 public class BucleFor {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
+//nota sobre el bucle for, usé como límite i == 10 y no se me ejecutaba, no me daba error pero no me escribía nada.
+
             System.out.println(i);
         }
     }

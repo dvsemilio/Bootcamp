@@ -7,8 +7,18 @@ muestra sus detalles llamando al método mostrarDetalles.
 Nombre: Juan
 Edad: 25 */
 public class Persona {
-    public static void main(String[] args) {
-        
+    String nombre; // Atributo nombre con modificador default
+    int edad;      // Atributo edad con modificador default
+
+    // Constructor para inicializar los atributos
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
 
+    // Método para mostrar los detalles de la persona
+    public void mostrarDetalles() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+    }
 }
